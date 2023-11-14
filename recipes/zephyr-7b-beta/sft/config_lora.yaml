@@ -16,7 +16,7 @@ lora_target_modules:
 
 # Data training arguments
 dataset_mixer:
-  HuggingFaceH4/ultrachat_200k: 1.0
+  JanLilan/cf-text-datasetv2: 1.0
 dataset_splits:
 - train_sft
 - test_sft
@@ -47,6 +47,7 @@ per_device_train_batch_size: 4
 push_to_hub: true
 report_to:
 - tensorboard
+- wandb
 save_strategy: "no"
 save_total_limit: null
 seed: 42
