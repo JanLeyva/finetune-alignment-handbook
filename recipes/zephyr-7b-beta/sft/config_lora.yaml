@@ -1,7 +1,8 @@
 # Model arguments
 model_name_or_path: HuggingFaceH4/zephyr-7b-beta
 torch_dtype: auto
-use_flash_attention_2: true
+# we cannot use flash attention2 as we are running it on T4 not supported.
+use_flash_attention_2: false
 # LoRA arguments
 use_peft: true
 lora_r: 64
